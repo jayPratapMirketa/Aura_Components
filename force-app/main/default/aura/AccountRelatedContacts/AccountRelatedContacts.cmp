@@ -1,0 +1,28 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="AccountRelatedLightningClass">
+    <aura:attribute name = "recordId" type = "Id"/>
+    <aura:attribute name = "contactList" type = "Contact[]"/>
+    <aura:handler name = "init" value = "{!this}" action = "{!c.myAction}" />
+    <lightning:card title="Related Contacts" iconName="standard:account">
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+      <thead>
+       <tr>
+        <th>Contact Name</th>
+        <th>Title</th>
+        <th>Phone</th>
+        <th>Email</th>
+       </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    </lightning:card>
+    <aura:iteration items="{!v.contactList}" var="con">
+        <tr>
+            <td>{!con.Name}</td>
+            <td>{!con.Title}</td>
+            <td>{!con.Phone}</td>
+            <td>{!con.Email}</td>         
+        </tr>
+        {!con.name}
+    </aura:iteration>
+</aura:component>

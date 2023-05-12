@@ -1,0 +1,13 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="tableItems" type="List" default="[]"/>
+
+    <aura:attribute name="Columns" type="List"/>
+    
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+
+    <aura:handler name="saveEvent" event="c:saveEvent" action="{!c.handleSaveEvent}"/>
+
+    <c:RegistrationComponentEventForm />
+    <c:RegistrationComponentEventTable tableItems="{!v.tableItems}" Columns="{!v.Columns}" />
+    
+</aura:component>	

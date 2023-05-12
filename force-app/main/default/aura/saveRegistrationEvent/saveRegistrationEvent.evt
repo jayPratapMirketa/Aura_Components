@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="Event to save registration details">
+    <aura:attribute name="registrationDetail" type="Object" description="Registration details to be saved"/>
+</aura:event>

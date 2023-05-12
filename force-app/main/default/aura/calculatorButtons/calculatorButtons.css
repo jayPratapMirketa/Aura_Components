@@ -1,0 +1,11 @@
+.THIS .generalInfo{
+    display: grid;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+}
+.THIS .details{
+    width: 30%;
+}
+.THIS .registrationHeading{
+    font-size: 30px;
+}

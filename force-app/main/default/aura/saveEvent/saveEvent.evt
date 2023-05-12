@@ -1,0 +1,3 @@
+<aura:event type="COMPONENT" description="Event triggered when form is saved">
+    <aura:attribute name="savedInfo" type="Object"/>
+</aura:event>

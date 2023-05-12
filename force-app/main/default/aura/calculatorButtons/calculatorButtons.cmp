@@ -1,0 +1,35 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <!-- <aura:handler name="init" value="{! this }" action="{! c.init }"/> -->
+    <br></br>
+    <h1 class="registrationHeading">Registration Form</h1>
+
+    <lightning:input aura:id="info" class="details" required="true" type="name" label="Enter your name" messageWhenValueMissing="Please Enter Your Name"></lightning:input>
+    <br></br>
+    <lightning:input aura:id="info" class="details" required="true" type="email" pattern="[A-Za-z0-9._-]+@[a-z0-9-]+.[a-z]{2,}$" label="Enter your email" messageWhenValueMissing="Please Enter Your Email" messageWhenPatternMismatch="Your input doesn't follow the valid pattern"></lightning:input>
+    <br></br>
+    <lightning:input aura:id="info" class="details" required="true" type="tel" pattern="^\(?([0-9]{3})\)?[-.]?([0-9]{3})[-.]?([0-9]{4})$" maxlength="10" label="Enter Phone Number" messageWhenValueMissing="Please Enter Your Phone Number" messageWhenPatternMismatch="Your input doesn't follow the valid pattern"></lightning:input>
+    <br></br>
+    <lightning:input aura:id="info" class="details" required="true" type="text" label="Enter your Company" messageWhenValueMissing="Please Enter Your Company"></lightning:input>
+    <br></br>
+
+    <lightning:button variant="brand" label="Save" onclick="{! c.onSave }" title="Save" />
+
+    <br></br>
+
+    <aura:attribute name="tableItems" type="List" default="[]"/>
+    <!-- <aura:attribute name="Columns" type="List"/> -->
+
+<!-- <h1>Calculator</h1>
+    <br></br>
+    <lightning:input aura:id="firstValue" required="true" type="number" label="Enter First Value"></lightning:input>
+    <br></br>
+    <lightning:input aura:id="secondValue" required="true" type="number" label="Enter Second Value"></lightning:input>
+    <br></br>
+    <lightning:button variant="brand" label="Add" onclick="{! c.onAdd }" title="Add" />
+    <lightning:button variant="brand" label="Substract" onclick="{! c.onSubtract }" title="Substract" />
+    <lightning:button variant="brand" label="Multiply" onclick="{! c.onMultiply }" title="Multiply" />
+    <lightning:button variant="brand" label="Divide" onclick="{! c.onDivide }" title="Divide" />
+    <p><br></br>
+        Output shows here</p> -->
+    
+</aura:component>
